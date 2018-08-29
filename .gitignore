@@ -19,6 +19,9 @@ wp-content/plugins/woocommerce/*
 wp-content/plugins/wp-analytify/*
 wp-content/plugins/wp-migrate-db-pro/*
 wp-content/plugins/woocommerce*
+wp-content/plugins/mailchimp*
+.idea/*
+wp-content/plugins/hello.php
 xmlrpc.php
 wp-trackback.php
 wp-signup.php
