@@ -8,10 +8,10 @@ Template: storefront
 */
 
 @import '../../bower_components/bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900,900i|Roboto:400,900');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Montserrat:300,400,700,900');
 
-$heading-font: 'Playfair Display', serif;
-$default-font: 'Roboto', sans-serif;
+$heading-font: 'Permanent Marker', cursive;
+$default-font: 'Montserrat', sans-serif;
 
 body {
 
@@ -19,16 +19,47 @@ body {
 
     h1, h2, h3, h4, h5, h6 {
       font-family: $heading-font;
-      font-style: italic;
     }
 
     span, p, div {
       font-family: $default-font;
+      font-weight: 300;
+    }
+
+    h1.entry-title {
+      font-size: 4rem;
     }
 
     .button {
       font-weight: 900;
       text-transform: uppercase;
+      border-radius: 3px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+    ul {
+
+      &.products {
+
+        li {
+
+          &.product {
+
+            h2.woocommerce-loop-category__title {
+              font-family: $default-font;
+              font-weight: 200;
+            }
+
+          }
+
+        }
+
+      }
+
 
     }
 
