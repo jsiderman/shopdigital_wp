@@ -8,35 +8,74 @@ Template: storefront
 */
 
 @import '../../bower_components/bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Montserrat:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:800,900|Muli:300,400,700,900');
 
-$heading-font: 'Permanent Marker', cursive;
-$default-font: 'Montserrat', sans-serif;
+$heading-font: 'Raleway', sans-serif;
+$default-font: 'Muli', sans-serif;
+
+$purp: #793dff;
 
 body {
 
   &.dgtl {
+    background: #000;
+    color: #fff;
+
+    #page, header, footer {
+      background: #000;
+      color: #fff;
+    }
+
+    a {
+      color: #fff !important;
+      text-decoration: none;
+      transition: all .6s ease-in-out;
+
+      &:hover {
+        text-decoration: none;
+        color: $purp !important;
+      }
+
+    }
 
     h1, h2, h3, h4, h5, h6 {
       font-family: $heading-font;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    h1, h2.section-title {
+      background-image: linear-gradient(120deg, #793dff 0%, #793dff 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.2em;
+      background-position: 0 88%;
     }
 
     span, p, div {
       font-family: $default-font;
       font-weight: 300;
+      color: #fff;
     }
 
     h1.entry-title {
       font-size: 4rem;
+      color: #fff;
     }
 
     .button {
-      font-weight: 900;
+      font-weight: 800;
       text-transform: uppercase;
-      border-radius: 3px;
+      border-radius: 100px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      font-size: 0.7rem;
+      transition: all .6s ease-in-out;
 
       &:hover {
         text-decoration: none;
+        border-color: $purp;
       }
 
     }
@@ -60,6 +99,29 @@ body {
 
       }
 
+
+    }
+
+    form {
+
+      &.woocommerce-product-search {
+
+        &:before {
+          top: 1.5em;
+          left: 1.15em;
+        }
+
+        #woocommerce-product-search-field-0 {
+          border: 3px solid white;
+          border-radius: 100px;
+          box-shadow: none;
+          background: #000;
+          color: #fff;
+          font-size: 15px;
+        }
+
+
+      }
 
     }
 
